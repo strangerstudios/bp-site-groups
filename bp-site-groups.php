@@ -127,7 +127,7 @@ add_action('template_redirect', 'bpsg_template_redirect');
 */
 function bpsg_admin_init_redirect()
 {
-	if($_REQUEST['page'] == 'bp-groups' && $_REQUEST['action'] == 'edit' && !empty($_REQUEST['gid']))
+	if(!empty($_REQUEST['page']) && $_REQUEST['page'] == 'bp-groups' && !empty($_REQUEST['action']) && $_REQUEST['action'] == 'edit' && !empty($_REQUEST['gid']))
 	{
 		//get group id
 		$group_id = intval($_REQUEST['gid']);
